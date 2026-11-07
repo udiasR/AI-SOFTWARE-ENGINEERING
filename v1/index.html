@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Smart Campus - Room Availability (v1)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>Room 301 - Lecture Hall (Floor 3)</h1>
+    <p>Existing booking: 10:00-11:00 (600-660). Check a slot; this tool does not make bookings.</p>
+    <label for="start">Start time</label>
+    <input id="start" placeholder="HH:MM or minutes, e.g. 09:30">
+    <label for="end">End time</label>
+    <input id="end" placeholder="HH:MM or minutes, e.g. 10:30">
+    <label for="now">Current time (now)</label>
+    <input id="now" value="09:00">
+    <label class="check"><input id="blocked" type="checkbox"> Room blocked</label>
+    <button id="check" type="button">Check availability</button>
+    <div id="result" role="status" aria-live="polite"></div>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
