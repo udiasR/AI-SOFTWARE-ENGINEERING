@@ -1,0 +1,10 @@
+flowchart TB
+  HTML["v1/index.html (single room 301, blocked toggle)"] --> APP
+  subgraph APP["v1/app.js  (74 non-blank lines, 1 file)"]
+    direction TB
+    D["data: ROOM, EXISTING"]
+    P["parsing x3 copies (start, end, now)"]
+    R["rules: range, order, blocked, now, 120 min, overlap"]
+    F["HH:MM formatting x6 inline"]
+    U["DOM + innerHTML x4"]
+  end

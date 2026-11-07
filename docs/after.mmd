@@ -1,0 +1,11 @@
+flowchart TB
+  HTML["index.html"] --> MAIN["ui/app.js - controller (events, state, F4/F5)"]
+  MAIN --> REND["ui/render.js - presentation (DOM only)"]
+  MAIN --> AV["domain/availability.js - AC1-AC5 rules"]
+  MAIN --> FIL["domain/filter.js - F1, F2 filtering"]
+  AV --> TIME["domain/time.js - parseTime, formatTime, overlap"]
+  AV --> DATA["data/rooms.js - 5-room catalog, frozen"]
+  MAIN --> DATA
+  REND -.-> AV
+  classDef pure fill:#e8f4ea,stroke:#4a8;
+  class AV,FIL,TIME,DATA pure;
