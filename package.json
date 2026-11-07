@@ -1,0 +1,12 @@
+{
+  "name": "smart-campus-room-checker",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "python3 -m http.server 8080",
+    "test": "node --test \"tests/*.test.js\"",
+    "test:v1": "cd v1 && node --test baseline.test.js"
+  },
+  "devDependencies": { "jsdom": "31.0.0" }
+}

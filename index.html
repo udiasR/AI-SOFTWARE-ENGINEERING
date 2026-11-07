@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Smart Campus - Room Availability (v2)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>Smart Campus - Room Availability</h1>
+    <p>Checks availability only - this tool does not make bookings.</p>
+
+    <section aria-labelledby="req-h">
+      <h2 id="req-h">1. Requirements</h2>
+      <label for="attendees">Attendees (optional)</label>
+      <input id="attendees" inputmode="numeric" placeholder="e.g. 25">
+      <div id="attendees-error" class="field-error" role="alert"></div>
+      <fieldset><legend>Required equipment (all must be present)</legend>
+        <div id="equipment-group"></div>
+      </fieldset>
+    </section>
+
+    <section aria-labelledby="room-h">
+      <h2 id="room-h">2. Choose a room</h2>
+      <div id="room-list"></div>
+    </section>
+
+    <section aria-labelledby="time-h">
+      <h2 id="time-h">3. Check a time slot</h2>
+      <label for="start">Start time</label>
+      <input id="start" placeholder="HH:MM or minutes, e.g. 09:30">
+      <label for="end">End time</label>
+      <input id="end" placeholder="HH:MM or minutes, e.g. 10:30">
+      <label for="now">Current time (now)</label>
+      <input id="now" value="09:00">
+      <button id="check" type="button">Check availability</button>
+      <div id="result" role="status" aria-live="polite"></div>
+    </section>
+  </main>
+  <script type="module">
+    import { initApp } from "./src/ui/app.js";
+    initApp(document);
+  </script>
+</body>
+</html>

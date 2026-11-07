@@ -1,0 +1,500 @@
+
+> smart-campus-room-checker@2.0.0 test
+> node --test "tests/*.test.js"
+
+TAP version 13
+# Subtest: catalog has at least four rooms with required fields
+ok 1 - catalog has at least four rooms with required fields
+  ---
+  duration_ms: 0.793879
+  type: 'test'
+  ...
+# Subtest: F1 capacity boundary: exact capacity matches, one more does not
+ok 2 - F1 capacity boundary: exact capacity matches, one more does not
+  ---
+  duration_ms: 0.192871
+  type: 'test'
+  ...
+# Subtest: F1 no capacity filter when attendees is null
+ok 3 - F1 no capacity filter when attendees is null
+  ---
+  duration_ms: 0.161155
+  type: 'test'
+  ...
+# Subtest: F2 equipment filter requires ALL selected items
+ok 4 - F2 equipment filter requires ALL selected items
+  ---
+  duration_ms: 0.605122
+  type: 'test'
+  ...
+# Subtest: F1+F2 combined
+ok 5 - F1+F2 combined
+  ---
+  duration_ms: 0.10858
+  type: 'test'
+  ...
+# Subtest: F3 blocked rooms still listed but flagged (availability blocks them, see regression tests)
+ok 6 - F3 blocked rooms still listed but flagged (availability blocks them, see regression tests)
+  ---
+  duration_ms: 0.080364
+  type: 'test'
+  ...
+# Subtest: F4 impossible requirements give an empty list
+ok 7 - F4 impossible requirements give an empty list
+  ---
+  duration_ms: 0.069228
+  type: 'test'
+  ...
+# Subtest: attendee input parsing
+ok 8 - attendee input parsing
+  ---
+  duration_ms: 0.158166
+  type: 'test'
+  ...
+# Subtest: equipment options are derived from the catalog
+ok 9 - equipment options are derived from the catalog
+  ---
+  duration_ms: 0.231799
+  type: 'test'
+  ...
+# Subtest: parity: 660-720 now=540 blocked=false
+ok 10 - parity: 660-720 now=540 blocked=false
+  ---
+  duration_ms: 1.798802
+  type: 'test'
+  ...
+# Subtest: parity: 660-720 now=540 blocked=true
+ok 11 - parity: 660-720 now=540 blocked=true
+  ---
+  duration_ms: 0.189604
+  type: 'test'
+  ...
+# Subtest: parity: 630-690 now=540 blocked=false
+ok 12 - parity: 630-690 now=540 blocked=false
+  ---
+  duration_ms: 0.096765
+  type: 'test'
+  ...
+# Subtest: parity: 630-690 now=540 blocked=true
+ok 13 - parity: 630-690 now=540 blocked=true
+  ---
+  duration_ms: 0.077945
+  type: 'test'
+  ...
+# Subtest: parity: 560-600 now=540 blocked=false
+ok 14 - parity: 560-600 now=540 blocked=false
+  ---
+  duration_ms: 0.164811
+  type: 'test'
+  ...
+# Subtest: parity: 560-600 now=540 blocked=true
+ok 15 - parity: 560-600 now=540 blocked=true
+  ---
+  duration_ms: 1.173404
+  type: 'test'
+  ...
+# Subtest: parity: 720-840 now=540 blocked=false
+ok 16 - parity: 720-840 now=540 blocked=false
+  ---
+  duration_ms: 0.151896
+  type: 'test'
+  ...
+# Subtest: parity: 720-840 now=540 blocked=true
+ok 17 - parity: 720-840 now=540 blocked=true
+  ---
+  duration_ms: 0.065355
+  type: 'test'
+  ...
+# Subtest: parity: 720-841 now=540 blocked=false
+ok 18 - parity: 720-841 now=540 blocked=false
+  ---
+  duration_ms: 0.219538
+  type: 'test'
+  ...
+# Subtest: parity: 720-841 now=540 blocked=true
+ok 19 - parity: 720-841 now=540 blocked=true
+  ---
+  duration_ms: 0.262926
+  type: 'test'
+  ...
+# Subtest: parity: 540-570 now=540 blocked=false
+ok 20 - parity: 540-570 now=540 blocked=false
+  ---
+  duration_ms: 0.101953
+  type: 'test'
+  ...
+# Subtest: parity: 540-570 now=540 blocked=true
+ok 21 - parity: 540-570 now=540 blocked=true
+  ---
+  duration_ms: 0.045751
+  type: 'test'
+  ...
+# Subtest: parity: 541-570 now=540 blocked=false
+ok 22 - parity: 541-570 now=540 blocked=false
+  ---
+  duration_ms: 0.097672
+  type: 'test'
+  ...
+# Subtest: parity: 541-570 now=540 blocked=true
+ok 23 - parity: 541-570 now=540 blocked=true
+  ---
+  duration_ms: 0.037526
+  type: 'test'
+  ...
+# Subtest: parity: 700-650 now=540 blocked=false
+ok 24 - parity: 700-650 now=540 blocked=false
+  ---
+  duration_ms: 0.062165
+  type: 'test'
+  ...
+# Subtest: parity: 700-650 now=540 blocked=true
+ok 25 - parity: 700-650 now=540 blocked=true
+  ---
+  duration_ms: 0.032247
+  type: 'test'
+  ...
+# Subtest: parity: 700-700 now=540 blocked=false
+ok 26 - parity: 700-700 now=540 blocked=false
+  ---
+  duration_ms: 0.028712
+  type: 'test'
+  ...
+# Subtest: parity: 700-700 now=540 blocked=true
+ok 27 - parity: 700-700 now=540 blocked=true
+  ---
+  duration_ms: 0.037593
+  type: 'test'
+  ...
+# Subtest: parity: 1380-1440 now=540 blocked=false
+ok 28 - parity: 1380-1440 now=540 blocked=false
+  ---
+  duration_ms: 0.039208
+  type: 'test'
+  ...
+# Subtest: parity: 1380-1440 now=540 blocked=true
+ok 29 - parity: 1380-1440 now=540 blocked=true
+  ---
+  duration_ms: 0.031159
+  type: 'test'
+  ...
+# Subtest: parity: 1400-1441 now=540 blocked=false
+ok 30 - parity: 1400-1441 now=540 blocked=false
+  ---
+  duration_ms: 0.030348
+  type: 'test'
+  ...
+# Subtest: parity: 1400-1441 now=540 blocked=true
+ok 31 - parity: 1400-1441 now=540 blocked=true
+  ---
+  duration_ms: 0.029398
+  type: 'test'
+  ...
+# Subtest: parity: 600.5-660 now=540 blocked=false
+ok 32 - parity: 600.5-660 now=540 blocked=false
+  ---
+  duration_ms: 0.029057
+  type: 'test'
+  ...
+# Subtest: parity: 600.5-660 now=540 blocked=true
+ok 33 - parity: 600.5-660 now=540 blocked=true
+  ---
+  duration_ms: 0.028095
+  type: 'test'
+  ...
+# Subtest: parity: 1e3-1100 now=540 blocked=false
+ok 34 - parity: 1e3-1100 now=540 blocked=false
+  ---
+  duration_ms: 0.033611
+  type: 'test'
+  ...
+# Subtest: parity: 1e3-1100 now=540 blocked=true
+ok 35 - parity: 1e3-1100 now=540 blocked=true
+  ---
+  duration_ms: 0.027878
+  type: 'test'
+  ...
+# Subtest: parity: 0x2d0-0x2e0 now=540 blocked=false
+ok 36 - parity: 0x2d0-0x2e0 now=540 blocked=false
+  ---
+  duration_ms: 0.058948
+  type: 'test'
+  ...
+# Subtest: parity: 0x2d0-0x2e0 now=540 blocked=true
+ok 37 - parity: 0x2d0-0x2e0 now=540 blocked=true
+  ---
+  duration_ms: 0.03239
+  type: 'test'
+  ...
+# Subtest: parity: 11:00:59-12:00 now=540 blocked=false
+ok 38 - parity: 11:00:59-12:00 now=540 blocked=false
+  ---
+  duration_ms: 0.03233
+  type: 'test'
+  ...
+# Subtest: parity: 11:00:59-12:00 now=540 blocked=true
+ok 39 - parity: 11:00:59-12:00 now=540 blocked=true
+  ---
+  duration_ms: 0.027616
+  type: 'test'
+  ...
+# Subtest: parity: -30-30 now=0 blocked=false
+ok 40 - parity: -30-30 now=0 blocked=false
+  ---
+  duration_ms: 0.027622
+  type: 'test'
+  ...
+# Subtest: parity: -30-30 now=0 blocked=true
+ok 41 - parity: -30-30 now=0 blocked=true
+  ---
+  duration_ms: 0.026818
+  type: 'test'
+  ...
+# Subtest: parity: 10:30-11:30 now=09:00 blocked=false
+ok 42 - parity: 10:30-11:30 now=09:00 blocked=false
+  ---
+  duration_ms: 0.047476
+  type: 'test'
+  ...
+# Subtest: parity: 10:30-11:30 now=09:00 blocked=true
+ok 43 - parity: 10:30-11:30 now=09:00 blocked=true
+  ---
+  duration_ms: 0.032622
+  type: 'test'
+  ...
+# Subtest: parity: 09:30-10:30 now=09:00 blocked=false
+ok 44 - parity: 09:30-10:30 now=09:00 blocked=false
+  ---
+  duration_ms: 0.081355
+  type: 'test'
+  ...
+# Subtest: parity: 09:30-10:30 now=09:00 blocked=true
+ok 45 - parity: 09:30-10:30 now=09:00 blocked=true
+  ---
+  duration_ms: 0.034014
+  type: 'test'
+  ...
+# Subtest: parity: 24:00-25:00 now=540 blocked=false
+ok 46 - parity: 24:00-25:00 now=540 blocked=false
+  ---
+  duration_ms: 0.030903
+  type: 'test'
+  ...
+# Subtest: parity: 24:00-25:00 now=540 blocked=true
+ok 47 - parity: 24:00-25:00 now=540 blocked=true
+  ---
+  duration_ms: 0.027641
+  type: 'test'
+  ...
+# Subtest: parity: 600-660 now=abc blocked=false
+ok 48 - parity: 600-660 now=abc blocked=false
+  ---
+  duration_ms: 0.028698
+  type: 'test'
+  ...
+# Subtest: parity: 600-660 now=abc blocked=true
+ok 49 - parity: 600-660 now=abc blocked=true
+  ---
+  duration_ms: 0.027396
+  type: 'test'
+  ...
+# Subtest: parity: - now=540 blocked=false
+ok 50 - parity: - now=540 blocked=false
+  ---
+  duration_ms: 0.026041
+  type: 'test'
+  ...
+# Subtest: parity: - now=540 blocked=true
+ok 51 - parity: - now=540 blocked=true
+  ---
+  duration_ms: 0.027807
+  type: 'test'
+  ...
+# Subtest: parity: 1380-1440 now=1439 blocked=false
+ok 52 - parity: 1380-1440 now=1439 blocked=false
+  ---
+  duration_ms: 0.654673
+  type: 'test'
+  ...
+# Subtest: parity: 1380-1440 now=1439 blocked=true
+ok 53 - parity: 1380-1440 now=1439 blocked=true
+  ---
+  duration_ms: 0.053861
+  type: 'test'
+  ...
+# Subtest: parity: 100-200 now=100 blocked=false
+ok 54 - parity: 100-200 now=100 blocked=false
+  ---
+  duration_ms: 0.037096
+  type: 'test'
+  ...
+# Subtest: parity: 100-200 now=100 blocked=true
+ok 55 - parity: 100-200 now=100 blocked=true
+  ---
+  duration_ms: 0.028576
+  type: 'test'
+  ...
+# Subtest: AC4 free slot after the booking is available (660-720)
+ok 56 - AC4 free slot after the booking is available (660-720)
+  ---
+  duration_ms: 2.484734
+  type: 'test'
+  ...
+# Subtest: AC4 overlap is unavailable and names the booking (630-690)
+ok 57 - AC4 overlap is unavailable and names the booking (630-690)
+  ---
+  duration_ms: 0.408515
+  type: 'test'
+  ...
+# Subtest: AC4 boundary: touching endpoints are not overlap (560-600, 660-720); 1-minute overlap is
+ok 58 - AC4 boundary: touching endpoints are not overlap (560-600, 660-720); 1-minute overlap is
+  ---
+  duration_ms: 0.190684
+  type: 'test'
+  ...
+# Subtest: AC3 blocked room rejects everything, even a free slot (660-720)
+ok 59 - AC3 blocked room rejects everything, even a free slot (660-720)
+  ---
+  duration_ms: 0.181907
+  type: 'test'
+  ...
+# Subtest: AC3 blocked + start = now still reports blocked
+ok 60 - AC3 blocked + start = now still reports blocked
+  ---
+  duration_ms: 0.194703
+  type: 'test'
+  ...
+# Subtest: AC2 boundary: exactly 120 minutes allowed (720-840)
+ok 61 - AC2 boundary: exactly 120 minutes allowed (720-840)
+  ---
+  duration_ms: 0.165494
+  type: 'test'
+  ...
+# Subtest: AC2 boundary: 121 minutes rejected (720-841)
+ok 62 - AC2 boundary: 121 minutes rejected (720-841)
+  ---
+  duration_ms: 0.213995
+  type: 'test'
+  ...
+# Subtest: AC1 start must be strictly after now (540 rejected, 541 accepted)
+ok 63 - AC1 start must be strictly after now (540 rejected, 541 accepted)
+  ---
+  duration_ms: 0.250523
+  type: 'test'
+  ...
+# Subtest: AC1 reversed or equal times give an amber message (700-650, 700-700)
+ok 64 - AC1 reversed or equal times give an amber message (700-650, 700-700)
+  ---
+  duration_ms: 0.342728
+  type: 'test'
+  ...
+# Subtest: AC1 range: 1380-1440 allowed, 1400-1441 rejected
+ok 65 - AC1 range: 1380-1440 allowed, 1400-1441 rejected
+  ---
+  duration_ms: 0.463147
+  type: 'test'
+  ...
+# Subtest: AC1 integer minutes / HH:MM only: floats, sci-notation, hex, HH:MM:SS, negatives rejected
+ok 66 - AC1 integer minutes / HH:MM only: floats, sci-notation, hex, HH:MM:SS, negatives rejected
+  ---
+  duration_ms: 0.262674
+  type: 'test'
+  ...
+# Subtest: AC5 booking data is immutable and unchanged by checks
+ok 67 - AC5 booking data is immutable and unchanged by checks
+  ---
+  duration_ms: 0.659108
+  type: 'test'
+  ...
+# Subtest: Room data separation: result uses the chosen room's own bookings only
+ok 68 - Room data separation: result uses the chosen room's own bookings only
+  ---
+  duration_ms: 0.219225
+  type: 'test'
+  ...
+# Subtest: No room selected gives an amber message
+ok 69 - No room selected gives an amber message
+  ---
+  duration_ms: 0.092401
+  type: 'test'
+  ...
+# Subtest: UI: all rooms listed initially; result region is an aria-live status (AC6)
+ok 70 - UI: all rooms listed initially; result region is an aria-live status (AC6)
+  ---
+  duration_ms: 87.263079
+  type: 'test'
+  ...
+# Subtest: UI: successful filtering (capacity + equipment) shows only matching rooms
+ok 71 - UI: successful filtering (capacity + equipment) shows only matching rooms
+  ---
+  duration_ms: 15.986869
+  type: 'test'
+  ...
+# Subtest: UI: unsuccessful filtering shows empty state and disables the check button (F4)
+ok 72 - UI: unsuccessful filtering shows empty state and disables the check button (F4)
+  ---
+  duration_ms: 11.393232
+  type: 'test'
+  ...
+# Subtest: UI: invalid attendees shows a clear error
+ok 73 - UI: invalid attendees shows a clear error
+  ---
+  duration_ms: 9.993807
+  type: 'test'
+  ...
+# Subtest: UI: availability check uses the CHOSEN room's bookings
+ok 74 - UI: availability check uses the CHOSEN room's bookings
+  ---
+  duration_ms: 19.992269
+  type: 'test'
+  ...
+# Subtest: UI F5: switching rooms refreshes the result when times are entered
+ok 75 - UI F5: switching rooms refreshes the result when times are entered
+  ---
+  duration_ms: 10.566756
+  type: 'test'
+  ...
+# Subtest: UI F5: switching rooms with no times entered clears the old result
+ok 76 - UI F5: switching rooms with no times entered clears the old result
+  ---
+  duration_ms: 10.121371
+  type: 'test'
+  ...
+# Subtest: UI F3: blocked room is badged and reported blocked (red), never available
+ok 77 - UI F3: blocked room is badged and reported blocked (red), never available
+  ---
+  duration_ms: 9.54151
+  type: 'test'
+  ...
+# Subtest: UI: filtering out the selected room clears selection and result
+ok 78 - UI: filtering out the selected room clears selection and result
+  ---
+  duration_ms: 20.411041
+  type: 'test'
+  ...
+# Subtest: UI AC5(A\#03): editing any time input clears a stale result
+ok 79 - UI AC5(A\#03): editing any time input clears a stale result
+  ---
+  duration_ms: 9.018418
+  type: 'test'
+  ...
+# Subtest: UI AC1/AC6: malformed input gives an amber message; rule violation gives a red one
+ok 80 - UI AC1/AC6: malformed input gives an amber message; rule violation gives a red one
+  ---
+  duration_ms: 8.476651
+  type: 'test'
+  ...
+# Subtest: UI AC6: the page has a mobile viewport meta tag and a stylesheet
+ok 81 - UI AC6: the page has a mobile viewport meta tag and a stylesheet
+  ---
+  duration_ms: 6.946323
+  type: 'test'
+  ...
+1..81
+# tests 81
+# suites 0
+# pass 81
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 768.136264
