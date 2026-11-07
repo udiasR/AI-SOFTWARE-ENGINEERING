@@ -155,13 +155,13 @@ Boundaries: **120 vs 121 min**, **touching (560–600, 660–720) vs 1-minute ov
 **Answer** (about 250 words – edit so it matches what you personally did)
 
 
-**Context.** I gave the assistant a concise repository map, the acceptance criteria AC1–AC6, the new requirements F1–F5 and the constraints (fictional data, fixed time 09:00, no login, payments, live APIs or database, no build step), and asked for analysis and a plan before any code.
+**Context.** I gave the assistant a concise repository map, the acceptance criteria AC1–AC6 from Assignment #03, the new requirements F1–F5 and the constraints (fictional data, fixed time 09:00, no login, payments, live APIs or database, no build step), and asked for analysis and a plan before any code.
 
-**Useful vs incorrect.** The assistant correctly identified the duplicated validation, the duplicated 120-minute rule, the repeated `innerHTML` rendering and the untestable blocked-room branch, and proposed a layered domain/UI split that I adopted. One output was wrong: its first duplication count included a code comment, which I found by reading the grep matches and corrected.
+**Useful vs incorrect.** The assistant correctly identified the duplicated time parsing, the duplicated HH:MM formatting, the repeated `innerHTML` rendering and the single hard-coded room, and proposed a layered domain/UI split that I adopted. Two outputs were wrong: its first draft of the baseline used its own invented rules instead of my Assignment #03 criteria, so I had it rebuilt from my report; and a first duplication count included a code comment, which I found by reading the matches and corrected.
 
-**What I verified personally.** I ran the baseline tests on v1 before changing anything, then `npm test` after each change; I reviewed the diffs; I injected eight deliberate faults to confirm the tests really fail; I checked the page at phone width in a browser; and I re-ran every command behind the evidence table.
+**What I verified personally.** I ran the baseline tests on the original version before changing anything, then `npm test` after each change; I reviewed the diffs; I injected eight deliberate faults to confirm the tests really fail; I checked the page at phone width in a browser; and I re-ran every command behind the evidence table.
 
-**Influence of tests.** The v1 baseline fixed the behaviour I had to preserve. The mutation check showed which boundaries were protected (120/121 minutes, start = now, touching vs overlapping, capacity 24 vs 25). A parity test that sends the same inputs through v1 and v2 let me refactor without changing a single message, and it drove passing the room as a parameter.
+**Influence of tests.** The baseline fixed the behaviour I had to preserve. The mutation check showed which boundaries were protected (120/121 minutes, start = now, touching vs overlapping, capacity 24 vs 25). A parity test that sends the same inputs through v1 and v2 let me refactor without changing a single message, and it drove passing the room as a parameter.
 
 **Next.** I would add dates and recurring bookings, persist created bookings, test in a real browser with an accessibility audit and keyboard navigation, and separate the "no rooms match" and "invalid attendees" messages.
 
